@@ -66,11 +66,13 @@ if os.name == 'nt':
 else:
     ODOO_ROOT = Path('/opt/odoo_library_v19')                      # SUA: thu muc Odoo 19 tren server
     ODOO_CONF = Path('/etc/odoo/odoo_library_v19.conf')            # SUA: conf Odoo 19 (co eaut_library)
-    DB_NAME = 'odoo_library_v19'                                   # SUA: DB dich
+    DB_NAME = 'odoo_eaut_lib_v19'                                  # DB dich (Odoo 19)
     ADDONS_PATH = ''                                               # '' = dung addons_path trong conf
     SOURCE_ODOO_CONF = Path('/etc/odoo/odoo_eaut_lib_v18.conf')    # SUA: conf Odoo 18 (DB nguon)
-    SOURCE_DB = 'odoo_eaut_lib_v18'                                # SUA: DB nguon
-    SOURCE_FILESTORE = Path('/opt/odoo/.local/share/Odoo/filestore/odoo_eaut_lib_v18')  # SUA
+    SOURCE_DB = 'eaut_lib_backup'                                  # DB nguon (OpenEduCat da restore)
+    # Filestore cua DB THAT odoo_eaut_lib_v18 (eaut_lib_backup restore tu DB nay
+    # nen ten file trung khop). Script CHI DOC, khong ghi gi vao day.
+    SOURCE_FILESTORE = Path('/home/odoo_polyco/.local/share/Odoo/filestore/odoo_eaut_lib_v18')
     DATA_DIR = Path('/opt/odoo_library_v19/migration_data')        # file JSON trung gian
 ODOO_BIN = ODOO_ROOT / 'odoo-19.0' / 'odoo-bin'
 # =====================================================
